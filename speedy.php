@@ -11,7 +11,7 @@
 include_once("includes/functions.php");
 include_once("includes/config.php");
 //////////////////////
-$maxmsgs = imp_set(maxmsgs);
+$maxmsgs = imp_set("maxmsgs");
 if(!$rows){
   print "";
 }

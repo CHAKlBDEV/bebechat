@@ -52,7 +52,7 @@ a:hover
 </head>
 <body>
 <div id="container" align="center">
-<span style="font-size: 40px; color: #000000;">Welcome to <? echo $n; ?> <br> Choose a name:</span>
+<span style="font-size: 40px; color: #000000;">Welcome to <?= $n ?> <br> Choose a name:</span>
 <form method="post" action="chat.php">
 <input type="text" name="user" size="20">
 </form>

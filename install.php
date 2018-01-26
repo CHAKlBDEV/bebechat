@@ -8,7 +8,7 @@
 /*/////////////////////////////////////////////////////////////////////////////////////*/
 include_once('includes/config.php');
 ?>
-<form method="post" action="install.php?step=2">
+<form method="post" action="">
 Chat name:<input type="text" name="chatname" size="20"><br>
 Max Messages:<input type="text" name="maxmsgs" size="20" value="25"><br>
 Message text limit (Letters)<input type="text" name="maxlet" size="20" value="1000"><br>
@@ -16,8 +16,7 @@ Refresh Messages delay (ms):<input type="text" name="intval" size="20"  value="3
 <input type="submit" name="" value="OK">
 </form>
 <?php
-$step=$_GET['step'];
-if($step == 2){
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
 $chatname=$_POST['chatname'];
 $maxmsgs=$_POST['maxmsgs'];
 $maxlet=$_POST['maxlet'];
@@ -54,7 +53,7 @@ $result=mysql_query($table1);
 $result3=mysql_query($table3);
 $result1=mysql_query($table2);
 $result2=mysql_query($data1);
-if(!($result AND $result1 AND $result2 AND $result3){
+if(!($result AND $result1 AND $result2 AND $result3)){
   print "<title>Error</title>Can't create tables please check the config.php file ..." . mysql_error();
 }
 }

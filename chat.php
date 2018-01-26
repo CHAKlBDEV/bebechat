@@ -40,7 +40,7 @@ $_SESSION['user_session'] = "$user";
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title><? echo $user; ?> Chatting ...</title>
+<title><? =$user ?> Chatting ...</title>
 <meta name="generator" content="BEBE-Chat 0.9.1 BETA">
 <meta http-equiv="Content-Type" content="text/html; utf8">
 <script type="text/javascript">
